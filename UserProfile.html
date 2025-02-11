@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="css/userprofile.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Profile</h1>
+        <form action="#" method="POST">
+            <div class="profile-list">
+                <div class="profile-item form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" value="Danial" readonly>
+                </div>
+                <div class="profile-item form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="Male" selected>Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="profile-item form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" value="30">
+                </div>
+                <div class="profile-item form-group">
+                    <label for="contact">Contact:</label>
+                    <input type="text" id="contact" name="contact" value="013-2666012">
+                </div>
+                <div class="profile-item form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" value="password123">
+                </div>
+            </div>
+            <button type="submit" class="btn">Update Profile</button>
+        </form>
+    </div>
+</body>
+</html>

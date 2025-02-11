@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #2C3E50;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .user-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .user-table th, .user-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .user-table th {
+            background-color: #2C3E50;
+            color: white;
+            border: none;
+            font-weight: bold;
+        }
+
+        .user-table td {
+            background-color: #fff;
+            border: none;
+        }
+
+        .user-table tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+
+        .user-table tr:hover td {
+            background-color: #f1f1f1;
+        }
+
+        .user-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            background-color: #2C3E50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #34495E;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Management</h1>
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>admin</td>
+                    <td>Admin</td>
+                    <td>Active</td>
+                    <td>
+                        <div class="user-actions">
+                            <button onclick="window.location.href='edit_user.php?id=1'">Edit</button>
+                            <button onclick="deleteUser(1)">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function deleteUser(id) {
+            // Add your delete logic here
+            alert('User ' + id + ' deleted');
+        }
+    </script>
+</body>
+</html>

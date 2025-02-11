@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Care Booking</title>
+    <link rel="stylesheet" href="css/room.css">
+    <!-- Include a date picker library like flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Grab Your Room !</h1>
+        <!-- Progress Indicator -->
+        <div class="progress-indicator">
+            <div class="step" id="step1">1. Select Room</div>
+            <div class="step" id="step2">2. Enter Details</div>
+            <div class="step" id="step3">3. Finalized</div>
+        </div>
+        <form id="bookingForm">
+            <!-- Dropdown with tooltip -->
+            <div class="tooltip">
+                <label for="package">Select Package:</label>
+                <span class="tooltip-text">Choose a room package that suits your needs.</span>
+                <select id="package" name="package" required>
+                    <option value="" disabled selected>Choose a package</option>
+                    <option value="single">Single Room</option>
+                    <option value="double">Double Room</option>
+                    <option value="triple">Triple Room</option>
+                </select>
+            </div>
+            
+            <!-- Check-In Date -->
+            <div class="form-group">
+                <label for="checkin">Check-In Date:</label>
+                <input type="text" id="checkin" class="datepicker" name="checkin" required>
+            </div>
+        
+            <!-- Check-Out Date -->
+            <div class="form-group">
+                <label for="checkout">Check-Out Date:</label>
+                <input type="text" id="checkout" class="datepicker" name="checkout" required>
+            </div>
+            
+            <div class="button-container">
+                <button type="button" id="calculateButton" class="booking-button">Calculate Price</button>
+            </div>
+        </form>
+        
+        <div id="priceDisplay" class="price-display"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

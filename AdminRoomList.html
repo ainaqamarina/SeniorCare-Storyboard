@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+       
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+      
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #2C3E50;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+      
+        .room-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .room-table th,
+        .room-table td {
+            padding: 15px;
+            text-align: left;
+            border: none;
+        }
+
+        .room-table th {
+            background-color: #2C3E50;
+            color: white;
+            font-weight: bold;
+        }
+
+        .room-table td {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .room-table tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+
+        .room-table tr:hover td {
+            background-color: #f1f1f1;
+        }
+
+        a i {
+    margin-right: 10px;
+    color: #2C3E50;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+a i:hover {
+    color: #e74c3c;
+}
+
+.room-table img {
+            width: 100px;
+            height: auto; 
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Room List</h1>
+
+    
+        <table class="room-table">
+            <thead>
+                <tr>
+                    <th>Room ID</th>
+                    <th>Room Name</th>
+                    <th>Room Price(per day)</th>
+                    <th>Room Image</th>
+                    <th>Action</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#001</td>
+                    <td>Single</td>
+                    <td>RM 150</td>
+                    <td>  <img src="images/single.jpg" alt="Single Room"></td>
+                    <td> <a href="#" title="View">
+                        <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="#" title="Edit">
+                        <i class="fas fa-pencil-alt"></i>
+                    </a>
+                    <a href="#" title="Delete">
+                        <i class="fas fa-trash"></i>
+                    </a></td>
+                    <tr>
+                        <td>#002</td>
+                        <td>Double</td>
+                        <td>RM 200</td>
+                        <td><img src="images/double.jpg" alt="Double Room"></td>
+                        <td>
+                            <a href="#" title="View">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="#" title="Edit">
+                                <i class="fas fa-pencil-alt"></i>
+                            </a>
+                            <a href="#" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#003</td>
+                        <td>Suite</td>
+                        <td>RM 350</td>
+                        <td><img src="images/triple.jpg" alt="Suite Room"></td>
+                        <td>
+                            <a href="#" title="View">
+                                <i class="fas fa-eye"></i>
+                            </a>
+                            <a href="#" title="Edit">
+                                <i class="fas fa-pencil-alt"></i>
+                            </a>
+                            <a href="#" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    </body>
+    </html>
+    
