@@ -1,0 +1,164 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #81c784, #a5d6a7);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container styling (same as room container) */
+.container {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    width: 100%;
+    max-width: 1200px;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 50px; /* Add some space at the top */
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Header */
+.dashboard {
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.back-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+h1::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background-color: #4CAF50;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Therapy Packages Section */
+.therapy-packages {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Therapy Package Card (Same UI as room-section) */
+.package-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Same box shadow as room-section */
+    margin: 20px;
+    padding: 30px;
+    width: calc(33% - 40px); /* Similar width as room section */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.package-card:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Same hover shadow as room-section */
+}
+
+.package-card img {
+    width: 100%;
+    height: 200px; /* Set height for images */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; /* Rounded top corners like room-section */
+    transition: transform 0.3s ease-in-out;
+}
+
+.package-card:hover img {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+
+.package-card h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.package-card p {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 1em;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .package-card {
+        width: calc(50% - 40px); /* Adjust width for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .package-card {
+        width: calc(100% - 40px); /* Full width on small screens */
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .package-card h2 {
+        font-size: 1.2em;
+    }
+
+    .package-card p {
+        font-size: 0.9em;
+    }
+}
